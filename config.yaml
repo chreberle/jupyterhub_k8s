@@ -1,2 +1,22 @@
 proxy:
   secretToken: "<RANDOM_HEX>"
+
+# Jupyter lab is default
+singleuser:
+  defaultUrl: "/lab"
+    image:
+    name: jupyter/minimal-notebook
+    tag: d4cbf2f80a2a
+  profileList:
+    - display_name: "Minimal environment"
+      description: "To avoid too much bells and whistles: Python."
+      default: true
+    - display_name: "Datascience environment"
+      description: "If you want the additional bells and whistles: Python, R, and Julia."
+      kubespawner_override:
+        image: jupyter/datascience-notebook:d4cbf2f80a2a
+        
+hub:
+  extraConfig:
+    jupyterlab: |
+      c.Spawner.cmd = ['jupyter-labhub']
