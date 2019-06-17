@@ -4,7 +4,7 @@ proxy:
 # Jupyter lab is default
 singleuser:
   defaultUrl: "/lab"
-    image:
+  image:
     name: jupyter/minimal-notebook
     tag: d4cbf2f80a2a
   profileList:
