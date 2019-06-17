@@ -20,3 +20,17 @@ hub:
   extraConfig:
     jupyterlab: |
       c.Spawner.cmd = ['jupyter-labhub']
+      
+cull:
+  enabled: false
+  #timeout: <max-idle-seconds-before-user-pod-is-deleted>
+  #every: <number-of-seconds-this-check-is-done>
+
+auth:
+  admin:
+    users:
+      - eberchri
+  whitelist:
+    users:
+      - eberchri
+      - user1
