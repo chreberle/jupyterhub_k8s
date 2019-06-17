@@ -1,2 +1,2 @@
 proxy:
-  secretToken: 
+  secretToken: "<RANDOM_HEX>"
