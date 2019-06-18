@@ -29,8 +29,14 @@ cull:
 auth:
   admin:
     users:
-      - eberchri
+      - christian_adm
+  type: dummy
+  dummy:
+    password: "<DUMMY_PW>"
   whitelist:
     users:
-      - eberchri
-      - user1
+      - christian_adm
+      - christian_1
+      - christian_2
+      - christian_3
+      - christian_4
