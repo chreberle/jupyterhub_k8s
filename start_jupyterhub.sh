@@ -1,4 +1,5 @@
 # Bash script to launch Jupyterhub on Kubernetes cluster
+curl https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get | bash
 kubectl --namespace kube-system create serviceaccount tiller
 kubectl create clusterrolebinding tiller --clusterrole cluster-admin --serviceaccount=kube-system:tiller
 helm init --service-account tiller --wait
