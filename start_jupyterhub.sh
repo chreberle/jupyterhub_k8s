@@ -6,6 +6,7 @@ kubectl patch deployment tiller-deploy --namespace=kube-system --type=json --pat
 helm version
 
 sed -i 's/<RANDOM_HEX>/'"$( openssl rand -hex 32 )"'/g' config.yaml
+sed -i 's/<DUMMY_PW>/'$DUMMYPW'/g' config.yaml
 
 helm repo add jupyterhub https://jupyterhub.github.io/helm-chart/
 helm repo update
